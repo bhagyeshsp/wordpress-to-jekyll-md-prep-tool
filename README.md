@@ -4,7 +4,16 @@
 
 This Ruby script is specifically designed for users working with WordPress markdown exports in a Windows Subsystem for Linux 2 (WSL2) environment. It converts exported WordPress markdown files (via [Gatsby exporter](https://wordpress.org/plugins/wp-gatsby-markdown-exporter/)) into Jekyll-ready blog post files while handling Windows and WSL2 path conversions seamlessly.
 
-## Key WSL2 Features
+## Key Features
+
+- Extracts YAML front matter
+- Filters to specific allowed keys
+- Adds 'layout: post'
+- Cleans HTML content
+- Renames files with date prefix
+- Converts paths for WSL2 compatibility
+
+## WSL2-specific concerns handled
 
 - Automatically converts Windows paths (e.g., `C:\path\to\files`) to WSL2 paths (e.g., `/mnt/c/path/to/files`)
 - Handles path separators (`\` to `/`)
@@ -51,15 +60,6 @@ Modify these variables in the script:
 The script automatically converts:
 - `C:\Users\YourName\Documents\files` → `/mnt/c/Users/YourName/Documents/files`
 - `D:\Blog\WordPress\exports` → `/mnt/d/Blog/WordPress/exports`
-
-## How It Works
-
-- Extracts YAML front matter
-- Filters to specific allowed keys
-- Adds 'layout: post'
-- Cleans HTML content
-- Renames files with date prefix
-- Converts paths for WSL2 compatibility
 
 ### Allowed YAML Keys
 - title

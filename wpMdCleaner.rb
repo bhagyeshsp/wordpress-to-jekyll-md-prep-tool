@@ -151,8 +151,8 @@ class MarkdownCleaner
 end
 
 # Usage
-input_directory = 'C:/railsprojects/jekyll_practice/jekyll_clean/input_files/'
-output_directory = 'C:/railsprojects/jekyll_practice/jekyll_clean/cleaned_md/'
+input_directory = 'D:\Blog\WordPress\exports'
+output_directory = 'D:\Blog\WordPress\jekyllReady'
 
 cleaner = MarkdownCleaner.new(input_directory, output_directory)
 cleaner.clean_files
